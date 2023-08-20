@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8f3985;
+}
+
+.title {
+  font-family: "andmorey";
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: #cea2ac;
+  text-decoration: none;
+}

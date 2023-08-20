@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
+import Shows from "./Components/Shows/Shows";
+import Characters from "./Components/Characters/Characters";
+import Quotes from "./Components/Quotes/Quotes";
 
 import "./App.css";
 
@@ -14,6 +17,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shows" element={<Shows />} />
+          <Route path="/characters" element={<Characters />} />
+          <Route path="/quotes" element={<Quotes />} />
         </Routes>
       </Router>
     </div>
