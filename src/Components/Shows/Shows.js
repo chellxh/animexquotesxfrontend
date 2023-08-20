@@ -6,6 +6,10 @@ import { getAllShows } from "../common/API/showsAPI";
 function Shows() {
   const [shows, setShows] = useState([]);
 
+  useEffect(() => {
+    fetchShows();
+  }, []);
+
   async function fetchShows() {
     try {
       let result = await getAllShows();
@@ -14,10 +18,6 @@ function Shows() {
       console.log(e);
     }
   }
-
-  useEffect(() => {
-    fetchShows();
-  }, []);
 
   return (
     <div className="shows">

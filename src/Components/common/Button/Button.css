@@ -1,0 +1,15 @@
+.button {
+  background-color: #8f3985;
+  border: none;
+  border-radius: 0px 30px;
+  color: #cea2ac;
+  font-family: "pommel";
+  font-size: 16px;
+  padding: 10px 10px;
+  width: 100px;
+}
+
+.button:hover {
+  background-color: #cea2ac;
+  color: #8f3985;
+}
