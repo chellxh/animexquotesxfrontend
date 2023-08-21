@@ -20,4 +20,4 @@ Using Anime to showcase my new and improved skills using React, RESTful API, Jav
 
 - Backend [GitHub](https://github.com/chellxh/animexquotesxbackend)
 - Backend [onRender] (https://iamine.onrender.com)
-- Frontend [DeployedSite] ()
+- Frontend [DeployedSite] (https://iamine.netlify.app/)
