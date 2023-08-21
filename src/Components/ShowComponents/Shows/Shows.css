@@ -1,0 +1,27 @@
+.shows {
+  font-family: "manga temple";
+  margin: 50px;
+}
+
+.shows h2 {
+  text-align: right;
+}
+
+.shows ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.shows li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.shows img {
+  height: 250px;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}

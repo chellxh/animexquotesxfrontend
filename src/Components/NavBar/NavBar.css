@@ -1,17 +1,49 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
   align-items: center;
   background-color: #8f3985;
 }
 
-.title {
+.titleh1 {
   font-family: "andmorey";
-  font-size: 50px;
+  font-size: 40px;
+  color: #cea2ac;
+}
+.title a:link,
+.title a:after,
+.title a:hover,
+.title a:visited {
   text-decoration: none;
+  color: #cea2ac;
 }
 
-.title a:hover {
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  background-color: #a675a1;
+  display: none;
+  position: absolute;
+  font-family: "manga temple";
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(53, 50, 50, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
   color: #cea2ac;
+  padding: 12px 16px;
   text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #25283d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  text-align: right;
 }

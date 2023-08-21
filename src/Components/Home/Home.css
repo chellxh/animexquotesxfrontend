@@ -1,0 +1,12 @@
+.home {
+  font-size: 50px;
+  margin: 30px;
+  background-image: url("https://m.media-amazon.com/images/I/81c+ZxrOXPL._AC_UF894,1000_QL80_.jpg");
+  color: #8f3985;
+  font-family: "andmorey";
+  max-block-size: 500px;
+  padding: 25px;
+}
+.home h1 {
+  width: 100%;
+}

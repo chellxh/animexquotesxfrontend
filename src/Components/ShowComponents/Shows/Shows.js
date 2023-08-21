@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Overlay from "../common/Overlay/Overlay";
+import Overlay from "../../common/Overlay/Overlay";
 
-import { getAllQuotes } from "../common/API/quotesAPI";
-import "./Quotes.css";
+import { getAllShows } from "../../common/API/showsAPI";
+import "./Shows.css";
 
-function Quotes() {
-  const [quotes, setQuotes] = useState([]);
+function Shows() {
+  const [shows, setShows] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetchQuotes();
+    fetchShows();
   }, []);
 
-  async function fetchQuotes() {
+  async function fetchShows() {
     try {
       setIsLoading(true);
-      let result = await getAllQuotes();
-      setQuotes(result.data);
+      let result = await getAllShows();
+      setShows(result.data);
       setIsLoading(false);
     } catch (e) {
       setIsLoading(false);
@@ -27,14 +27,14 @@ function Quotes() {
 
   return (
     <Overlay isLoading={isLoading}>
-      <div className="quotes">
-        <h2>Quotes</h2>
+      <div className="shows">
+        <h2>Shows</h2>
         <ul>
-          {quotes.map(({ id, quote }) => {
+          {shows.map(({ id, title, image }) => {
             return (
               <li key={id}>
-                <Link to={`/characters/${id}`}>
-                  <p>{quote}</p>
+                <Link to={`/shows/${id}`}>
+                  <img src={image} alt={title} />
                 </Link>
               </li>
             );
@@ -45,4 +45,4 @@ function Quotes() {
   );
 }
 
-export default Quotes;
+export default Shows;

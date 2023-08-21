@@ -1,0 +1,29 @@
+.newForm {
+  background-color: #cea2ac;
+  color: #845880;
+  font-family: "andmorey";
+  font-size: 30px;
+  text-align: center;
+  margin: 35px;
+  padding: 50px;
+}
+
+.newh2 {
+  font-size: 45px;
+  text-align: right;
+  text-decoration: 5px underline;
+}
+.newForm div {
+  padding: 10px;
+}
+
+.newForm input,
+.newForm textarea {
+  font-family: "manga temple";
+  text-align: right;
+  border: none;
+  background-color: #efd9ce;
+  width: 300px;
+  height: 30px;
+  font-size: large;
+}

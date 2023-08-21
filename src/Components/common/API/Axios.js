@@ -4,7 +4,7 @@ const AxiosInstance = axios.create({
   baseURL:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3916"
-      : "DEPLOYURL",
+      : "https://iamine.onrender.com",
   timeOut: 5000,
 });
 

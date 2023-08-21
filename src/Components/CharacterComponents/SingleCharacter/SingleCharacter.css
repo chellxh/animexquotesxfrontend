@@ -1,0 +1,42 @@
+.character-container {
+  background-color: #a675a1;
+  font-family: "manga temple";
+  height: 100vh;
+  margin: 50px;
+  text-align: right;
+}
+.character-box h2 {
+  padding: 20px;
+  text-decoration: 7px underline #8f3985;
+}
+
+.characterData {
+  padding-top: 50px;
+}
+
+.characterData h3 {
+  font-family: "manga temple";
+  font-size: 3rem;
+  margin: 10px;
+}
+.characterData img {
+  float: left;
+  height: 500px;
+  padding-left: 100px;
+}
+
+.character-details {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.character-details li {
+  list-style: none;
+}
+.character-details h4 {
+  background-color: #8f3985;
+}
+.buttons {
+  padding-top: 50px;
+  padding-right: 45px;
+}

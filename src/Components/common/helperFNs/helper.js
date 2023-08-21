@@ -3,4 +3,5 @@ const dateFormatter = (date) => {
   let slicedDate = parsedDate.slice(0, 10);
   return slicedDate;
 };
+
 export { dateFormatter };

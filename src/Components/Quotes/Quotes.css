@@ -1,0 +1,28 @@
+.quotes {
+  font-family: "manga temple";
+  margin: 50px;
+}
+
+.quotes h2 {
+  text-align: right;
+}
+
+.quotes ul {
+  background-color: #a675a1;
+}
+.quotes li {
+  list-style: "✨";
+  font-size: 30px;
+  margin: 0;
+  padding: 2px;
+  padding-right: 30px;
+  text-align: right;
+  background-color: #a675a1;
+}
+li a {
+  color: #efd9ce;
+  text-decoration: none;
+}
+li a:hover {
+  color: #8f3985;
+}

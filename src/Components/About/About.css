@@ -1,0 +1,24 @@
+.aboutme {
+  background-image: url("https://images2.alphacoders.com/119/1195917.jpg");
+  background-size: cover;
+  background-repeat: none;
+  color: black;
+  font-family: "manga temple";
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  padding: 250px;
+  margin: 60px;
+}
+
+.aboutme h2 {
+  color: black;
+}
+
+.aboutme a {
+  color: #25283d;
+}
+
+.aboutme section {
+  background-color: #a675a158;
+}

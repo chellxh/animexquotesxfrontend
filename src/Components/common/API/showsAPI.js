@@ -27,18 +27,27 @@ const deleteShowById = async (id) => {
   }
 };
 
-const updateShowById = async (id) => {
+const updateShowById = async (id, show) => {
   try {
-    let result = await Axios.put(`/shows/${id}`);
+    let result = await Axios.put(`/shows/${id}`, show);
     return result;
   } catch (e) {
     return e;
   }
 };
 
-const createNewShow = async () => {
+const createNewShow = async (newShow) => {
   try {
-    let result = await Axios.post(`/shows`);
+    let result = await Axios.post(`/shows`, newShow);
+    return result;
+  } catch (e) {
+    return e;
+  }
+};
+
+const getAllCharacterFromShow = async (id) => {
+  try {
+    let result = await Axios.get(`/shows/${id}/characters/list`);
     return result;
   } catch (e) {
     return e;
@@ -51,4 +60,5 @@ export {
   deleteShowById,
   updateShowById,
   createNewShow,
+  getAllCharacterFromShow,
 };
