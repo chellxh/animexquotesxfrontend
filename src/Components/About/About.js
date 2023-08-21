@@ -11,9 +11,9 @@ function About() {
         I've been on a very bumpy journey to be a software engineer. This app
         reflects my love for anime and the things I have learning so far. I
         built this app based on my family's love of anime. . We loves Anime and
-        that brings us closer together. I hope it does the same you. Enjoy!
+        that brings us closer together. I hope it does the same for you. Enjoy!
         <br />
-        <a href="https://github.com/chellxh">GitHub</a>
+        Check out my <a href="https://github.com/chellxh">GitHub</a> !
       </section>
     </div>
   );

@@ -5,7 +5,6 @@ import Overlay from "../common/Overlay/Overlay";
 import {
   getSingleCharacter,
   updateCharacterById,
-  getAllQuotesFromCharacter,
 } from "../common/API/charactersAPI";
 
 import Button from "../common/Button/Button";

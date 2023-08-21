@@ -111,7 +111,7 @@ function SingleShow() {
         <div className="characterList">
           <h4>Characters</h4>
           <ul>
-            {showCharacters.map(({ id, name }) => {
+            {showCharacters?.map(({ id, name }) => {
               return (
                 <li key={id}>
                   <Link to={`/characters/${id}`}>{name}</Link>

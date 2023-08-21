@@ -84,7 +84,7 @@ function SingleCharacter() {
                 <h4>Quotes: </h4>
                 <ul>
                   <span>
-                    {characterQuotes.map(({ id, quote }) => {
+                    {characterQuotes?.map(({ id, quote }) => {
                       return <li key={id}>{quote}</li>;
                     })}
                   </span>

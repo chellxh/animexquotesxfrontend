@@ -14,12 +14,12 @@ function NewQuote() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      let result = await createNewQuote(newQuote);
+      await createNewQuote(newQuote);
       setNewQuote({
         quote: "",
       });
       alert(`New quote has been added!`);
-      navigate(`/quotes/${result.data.id}`);
+      navigate(`/quotes`);
     } catch (e) {
       console.log(e);
     }
@@ -43,7 +43,7 @@ function NewQuote() {
             onChange={handleTextChange}
           />
         </div>
-        
+
         <Button value={"Submit"} id={4} className={"button-submit"} />
       </form>
     </div>

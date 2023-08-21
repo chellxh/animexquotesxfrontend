@@ -25,6 +25,8 @@ function Characters() {
     }
   }
 
+  
+
   return (
     <Overlay isLoading={isLoading}>
       <div className="characters">
