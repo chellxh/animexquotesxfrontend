@@ -2,7 +2,7 @@
   background-image: url("https://images2.alphacoders.com/119/1195917.jpg");
   background-size: cover;
   background-repeat: none;
-  color: black;
+  color: #25283d;
   font-family: "manga temple";
   font-size: 20px;
   font-weight: 900;
@@ -10,15 +10,37 @@
   padding: 250px;
   margin: 60px;
 }
-
+#title {
+  background-color: rgba(245, 245, 245, 0.529);
+  border: 5px solid whitesmoke;
+  border-radius: 30px 30px 0px 0px;
+  padding: 20px;
+  text-align: right;
+}
+#name {
+  font-family: "andmorey";
+  font-size: 60px;
+}
 .aboutme h2 {
-  color: black;
+  color: #25283d;
+  background-color: rgba(245, 245, 245, 0.529);
+  border: 5px solid whitesmoke;
+  padding: 20px;
 }
 
+.aboutme h4,
+.aboutme p {
+  background-color: rgba(245, 245, 245, 0.529);
+  border: 5px solid whitesmoke;
+  padding: 20px;
+}
 .aboutme a {
   color: #25283d;
 }
 
 .aboutme section {
-  background-color: #a675a158;
+  background-color: rgba(245, 245, 245, 0.529);
+  border: 5px solid whitesmoke;
+  border-radius: 0px 0px 30px 30px;
+  padding: 20px;
 }
