@@ -3,14 +3,14 @@
   font-family: "manga temple";
   height: 75vh;
   text-align: right;
-  margin: 50px;
+  margin: 5px;
 }
 .show-box h2 {
   padding: 20px;
   text-decoration: 7px underline #8f3985;
 }
 .showData {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .showData h3 {
@@ -22,7 +22,7 @@
 .showData img {
   float: left;
   height: 500px;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 
 .h3Div {
@@ -37,6 +37,9 @@
   padding-right: 50px;
 }
 
+.characterList {
+  background-color: #a675a1;
+}
 .characterList h4 {
   background-color: #8f3985;
   padding: 20px;
@@ -45,4 +48,10 @@
 .characterList li {
   list-style: none;
   padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+.characterList a {
+  text-decoration: none;
+  color: #efd9ce;
 }
