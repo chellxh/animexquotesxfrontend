@@ -85,7 +85,7 @@ function SingleCharacter() {
                 <ul>
                   <span>
                     {characterQuotes?.map(({ id, quote }) => {
-                      return <li key={id}>{quote}</li>;
+                      return <li key={id}>🗯️ {quote}</li>;
                     })}
                   </span>
                 </ul>
@@ -110,6 +110,13 @@ function SingleCharacter() {
               id={3}
               className={"button-delete"}
               onHandleClick={() => deleteCharacter()}
+            />
+
+            <Button
+              value={"New Quote"}
+              id={3}
+              className={"button-new"}
+              onHandleClick={() => navigate(`/characters/${id}/quotes/new`)}
             />
           </div>
         </div>

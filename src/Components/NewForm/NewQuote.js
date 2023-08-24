@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { createNewQuote } from "../common/API/quotesAPI";
 import Button from "../common/Button/Button";
 import "./NewForm.css";
 
 function NewQuote() {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const [newQuote, setNewQuote] = useState({
+    character_id: id,
     quote: "",
   });
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await createNewQuote(newQuote);
+      await createNewQuote(newQuote, id);
       setNewQuote({
         quote: "",
       });
@@ -33,12 +35,12 @@ function NewQuote() {
       <h2 className="newh2"> New Quote</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Quote: </label>
+          <label htmlFor="quote">Quote: </label>
           <textarea
             required
             type="text"
-            id="name"
-            name="name"
+            id="quote"
+            name="quote"
             value={NewQuote.quote}
             onChange={handleTextChange}
           />

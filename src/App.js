@@ -44,13 +44,17 @@ function App() {
             <Route path="/shows" element={<Shows />} />
             <Route path="/shows/:id" element={<SingleShow />} />
             <Route path="/shows/:id/edit" element={<EditShow />} />
+            <Route
+              path="/shows/:id/characters/new"
+              element={<NewCharacter />}
+            />
             <Route path="/shows/new" element={<NewShow />} />
             <Route path="/characters" element={<Characters />} />
             <Route path="/characters/:id" element={<SingleCharacter />} />
             <Route path="/characters/:id/edit" element={<EditCharacter />} />
+            <Route path="/characters/:id/quotes/new" element={<NewQuote />} />
             <Route path="/characters/new" element={<NewCharacter />} />
             <Route path="/quotes" element={<Quotes />} />
-            <Route path="/quotes/new" element={<NewQuote />} />
             <Route path="/404" element={<h1>404 Not found!</h1>} />
           </Routes>
         </React.Suspense>

@@ -36,9 +36,9 @@ const updateCharacterById = async (id, character) => {
   }
 };
 
-const createNewCharacter = async (newCharacter) => {
+const createNewCharacter = async (newCharacter, showId) => {
   try {
-    let result = await Axios.post(`/characters`, newCharacter);
+    let result = await Axios.post(`/characters`, newCharacter, showId);
     return result;
   } catch (e) {
     return e;

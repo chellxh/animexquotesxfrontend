@@ -1,24 +1,33 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { createNewCharacter } from "../common/API/charactersAPI";
+import { createNewQuote } from "../common/API/quotesAPI";
 import Button from "../common/Button/Button";
 import "./NewForm.css";
 
 function NewCharacter() {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const [newCharacter, setNewCharacter] = useState({
+    show_id: id,
     name: "",
     status: "",
     power_lvl: "",
     image: "",
     quote: "",
   });
+  const [quote, setQuote] = useState({
+    show_id: id,
+    quote: "",
+  });
 
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      let result = await createNewCharacter(newCharacter);
+      let result = await createNewCharacter(newCharacter, id);
+      createNewQuote(result.data);
+
       setNewCharacter({
         name: "",
         status: "",
@@ -26,6 +35,7 @@ function NewCharacter() {
         image: "",
         quote: "",
       });
+
       alert(`New character ${newCharacter.name} has been added!`);
       navigate(`/characters/${result.data.id}`);
     } catch (e) {
@@ -35,6 +45,7 @@ function NewCharacter() {
 
   function handleTextChange(e) {
     setNewCharacter({ ...newCharacter, [e.target.id]: e.target.value });
+    setQuote({ ...quote, [e.target.id]: e.target.value });
   }
   return (
     <div className="newForm">
@@ -85,7 +96,7 @@ function NewCharacter() {
           />
         </div>
         <div>
-          <label htmlFor="quote">Quote: </label>
+          <label htmlFor="quote">Add Quote: </label>
           <input
             type="text"
             id="quote"

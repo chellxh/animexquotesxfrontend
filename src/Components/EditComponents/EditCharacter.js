@@ -5,7 +5,10 @@ import Overlay from "../common/Overlay/Overlay";
 import {
   getSingleCharacter,
   updateCharacterById,
+  getAllQuotesFromCharacter,
 } from "../common/API/charactersAPI";
+
+import { updateQuotesById } from "../common/API/quotesAPI";
 
 import Button from "../common/Button/Button";
 import "./Edit.css";
@@ -19,6 +22,10 @@ function EditCharacter() {
     status: "",
     power_lvl: "",
     image: "",
+    quote: "",
+  });
+  const [quote, setQuote] = useState({
+    character_id: "",
     quote: "",
   });
   const [isLoading, setIsLoading] = useState(false);
@@ -36,12 +43,26 @@ function EditCharacter() {
         navigate("/404");
       }
     };
+
+    const fetchQuoteByCharacter = async (characterId) => {
+      try {
+        let result = await getAllQuotesFromCharacter(characterId);
+        setQuote(result.data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
     fetchCharacterById();
+    fetchQuoteByCharacter();
   }, [id]);
 
   const handleTextChange = (e) => {
     setCharacter({
       ...character,
+      [e.target.id]: e.target.value,
+    });
+    setQuote({
+      ...quote,
       [e.target.id]: e.target.value,
     });
   };
@@ -51,6 +72,7 @@ function EditCharacter() {
     try {
       setIsLoading(true);
       await updateCharacterById(id, character);
+      await updateQuotesById(quote);
       navigate(`/characters/${id}`);
       setIsLoading(false);
     } catch (e) {

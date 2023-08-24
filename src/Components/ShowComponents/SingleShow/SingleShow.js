@@ -105,6 +105,12 @@ function SingleShow() {
                 className={"button-delete"}
                 onHandleClick={() => deleteShow()}
               />
+              <Button
+                value={"New Character"}
+                id={3}
+                className={"button-new"}
+                onHandleClick={() => navigate(`/shows/${id}/characters/new`)}
+              />
             </div>
           </div>
         </div>
@@ -114,7 +120,7 @@ function SingleShow() {
             {showCharacters?.map(({ id, name }) => {
               return (
                 <li key={id}>
-                  <Link to={`/characters/${id}`}>{name}</Link>
+                  ♦ <Link to={`/characters/${id}`}>{name}</Link>
                 </li>
               );
             })}

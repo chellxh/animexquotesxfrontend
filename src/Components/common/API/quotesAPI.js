@@ -36,9 +36,9 @@ const updateQuotesById = async (id, quotes) => {
   }
 };
 
-const createNewQuote = async (newQuotes) => {
+const createNewQuote = async (newQuotes, characterId) => {
   try {
-    let result = await Axios.post(`/quotes`, newQuotes);
+    let result = await Axios.post(`/quotes`, newQuotes, characterId);
     return result;
   } catch (e) {
     return e;
