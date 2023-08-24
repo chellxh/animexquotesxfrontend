@@ -10,9 +10,22 @@
   font-size: 40px;
   color: #cea2ac;
 }
+
+.about a:link,
+.about a:after,
+.about a:visited {
+  color: #cea2ac;
+  font-family: "manga temple";
+  text-decoration: none;
+}
+
+.about a:hover,
+.title a:hover {
+  color: #25283d;
+}
+
 .title a:link,
 .title a:after,
-.title a:hover,
 .title a:visited {
   text-decoration: none;
   color: #cea2ac;
