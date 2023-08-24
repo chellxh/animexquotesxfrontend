@@ -11,10 +11,12 @@ function NavBar() {
           <h1 className="titleh1">iAnime</h1>
         </Link>
       </div>
+      <div className="about">
+        <Link to="/about">About</Link>
+      </div>
       <div className="dropdown">
         <Button className={"button-dropbtn"} value={"Categories"} id={10} />
         <div className="dropdown-content">
-          <Link to="/about">About</Link>
           <Link to="/shows">Shows</Link>
           <Link to="/characters">Characters</Link>
           <Link to="/quotes">Quotes</Link>
