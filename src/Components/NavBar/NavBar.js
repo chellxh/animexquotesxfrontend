@@ -23,6 +23,14 @@ function NavBar() {
           <Link to="/quotes">Quotes</Link>
         </div>
       </div>
+      <div className="dropdown">
+        <Button className={"button-dropbtn"} value={"Create New"} id={5} />
+        <div className="dropdown-content">
+          <a href="/shows/new">Show</a>
+          <a href="/characters/new">Character</a>
+          <a href="/quotes/new">Quote</a>
+        </div>
+      </div>
     </nav>
   );
 }
