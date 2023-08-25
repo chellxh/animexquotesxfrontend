@@ -4,11 +4,8 @@
   align-items: center;
   background-color: #8f3985;
 }
-
-.titleh1 {
-  font-family: "andmorey";
-  font-size: 40px;
-  color: #cea2ac;
+.title img {
+  height: 75px;
 }
 
 .about a:link,
@@ -19,16 +16,8 @@
   text-decoration: none;
 }
 
-.about a:hover,
-.title a:hover {
+.about a:hover {
   color: #25283d;
-}
-
-.title a:link,
-.title a:after,
-.title a:visited {
-  text-decoration: none;
-  color: #cea2ac;
 }
 
 .dropdown {

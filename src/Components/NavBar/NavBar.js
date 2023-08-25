@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../common/Button/Button";
+import image from "../../assets/images/ianime.png";
 import "./NavBar.css";
 
 function NavBar() {
@@ -8,7 +9,7 @@ function NavBar() {
     <nav className="navbar">
       <div className="title">
         <Link to="/">
-          <h1 className="titleh1">iAnime</h1>
+          <img src={image} alt="iAnime" />
         </Link>
       </div>
       <div className="about">
